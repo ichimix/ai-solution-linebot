@@ -1,0 +1,11 @@
+{
+  "name": "ai-solution-linebot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@line/bot-sdk": "^7.5.2",
+    "express": "^4.19.2",
+    "openai": "^4.55.0"
+  }
+}
