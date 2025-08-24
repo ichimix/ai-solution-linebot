@@ -67,6 +67,10 @@ async function handleEvent(event) {
   ]);
 }
 
-// ローカル実行用（Vercelでは無視される）
-app.listen(3000, () => console.log("Server running"));
-export default app;
+// ヘルスチェック用（動作確認しやすくする）
+app.get("/api/health", (_, res) => res.status(200).send("ok"));
+
+// Vercel用エクスポート
+export default function handler(req, res) {
+  return app(req, res);
+}
